@@ -9,3 +9,34 @@
 // ["1234", "1567", "-2", "computer science"] → [“-2”]
 // ["Russia", "Denmark", "Kazan"] → []
 
+string[] Array = { "1234", "1567", "-2", "computer science" }; // задан первоначальный массив
+int count = 0;
+for (int i = 0; i < Array.Length; i++)
+{
+    if (Array[i].Length <= 3)
+    {
+        count++;
+    }
+}
+string[] NewArray = new string[count];
+int index = 0;
+for (int i = 0; i < Array.Length; i++)
+{
+    if (Array[i].Length <= 3)
+    {
+        NewArray[index++] = Array[i];
+    }
+}
+Console.Write("Исходный массив: ");
+for (int i = 0; i < Array.Length; i++)
+{
+    Console.Write(Array[i] + " ");
+}
+
+Console.WriteLine();
+
+Console.Write("Новый массив с учетом условия задачи: ");
+for (int i = 0; i < NewArray.Length; i++)
+{
+    Console.Write(NewArray[i] + " ");
+}
